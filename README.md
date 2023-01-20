@@ -3,6 +3,7 @@
 [![pub package](https://img.shields.io/pub/v/flutter_screenutil.svg)](https://pub.dev/packages/flutter_screenutil)
 [![pub points](https://badges.bar/flutter_screenutil/pub%20points)](https://pub.dev/packages/flutter_screenutil/score)
 [![popularity](https://badges.bar/flutter_screenutil/popularity)](https://pub.dev/packages/flutter_screenutil/score)
+[![CodeFactor](https://www.codefactor.io/repository/github/openflutter/flutter_screenutil/badge)](https://www.codefactor.io/repository/github/openflutter/flutter_screenutil)
 
 **A flutter plugin for adapting screen and font size.Let your UI display a reasonable layout on different screen sizes!**
 
@@ -194,8 +195,12 @@ class _HomePageState extends State<HomePage> {
     20.setVerticalSpacing  // SizedBox(height: 20 * scaleHeight)
     20.horizontalSpace  // SizedBox(height: 20 * scaleWidth)
     const RPadding.all(8)   // Padding.all(8.r) - take advantage of const key word
+    EdgeInsets.all(10).w    //EdgeInsets.all(10.w)
     REdgeInsets.all(8)       // EdgeInsets.all(8.r)
     EdgeInsets.only(left:8,right:8).r // EdgeInsets.only(left:8.r,right:8.r).
+    BoxConstraints(maxWidth: 100, minHeight: 100).w    //BoxConstraints(maxWidth: 100.w, minHeight: 100.w)
+    Radius.circular(16).w          //Radius.circular(16.w)
+    BorderRadius.all(Radius.circular(16)).w  
 ```
 
 #### Adapt screen size

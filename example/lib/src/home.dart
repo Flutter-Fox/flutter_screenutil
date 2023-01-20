@@ -54,10 +54,9 @@ class HomePageScaffold extends StatelessWidget {
                 ),
                 // Without using Extensions
                 Container(
-                  padding: EdgeInsets.all(ScreenUtil().setWidth(10)),
-                  width: ScreenUtil().setWidth(180),
-                  height: ScreenUtil().setHeight(200),
                   color: Colors.blue,
+                  constraints: BoxConstraints(maxWidth: 180, minHeight: 200).hw,
+                  padding: EdgeInsets.all(10.w),
                   child: Text(
                     'My design draft width: 180dp\n\n'
                     'My design draft height: 200dp',
@@ -70,10 +69,13 @@ class HomePageScaffold extends StatelessWidget {
               ],
             ),
             Container(
-              padding: EdgeInsets.all(10.w),
+              padding: EdgeInsets.all(10).w,
+              decoration: BoxDecoration(
+                borderRadius: BorderRadius.all(Radius.circular(16).w),
+                color: Colors.green,
+              ),
               width: 100.r,
               height: 100.r,
-              color: Colors.green,
               child: Text(
                 'I am a square with a side length of 100',
                 style: TextStyle(
